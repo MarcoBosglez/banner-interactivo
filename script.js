@@ -1,4 +1,6 @@
 window.onload = function() {
+    console.log("JavaScript is running!");
+    
     const content = document.getElementById("content");
     content.style.opacity = 0;
     
