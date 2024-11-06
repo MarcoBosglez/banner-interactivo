@@ -1,28 +1,30 @@
-// Display an alert when the button is clicked
-function showMessage() {
-    alert('Button clicked!');
-}
-
-// Change the content of an element
-function changeContent() {
-    const mainContent = document.querySelector('main p');
-    mainContent.textContent = 'The content has been changed!';
-}
-
-// Toggle a CSS class on an element
-function toggleHighlight() {
-    const header = document.querySelector('header');
-    header.classList.toggle('highlight');
-}
-
-// Wait for the DOM to fully load before executing code
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('JavaScript is running and DOM is fully loaded.');
+window.onload = function() {
+    const content = document.getElementById("content");
+    content.style.opacity = 0;
     
-    // Adding event listeners for other testing purposes
-    const button = document.querySelector('.btn');
-    button.addEventListener('click', () => {
-        changeContent();
-        toggleHighlight();
-    });
-});
+    // Fade in effect
+    let opacity = 0;
+    const fadeIn = setInterval(function() {
+        if (opacity >= 1) {
+            clearInterval(fadeIn);
+            slideText(); // Start sliding after fade-in completes
+        } else {
+            opacity += 0.02;
+            content.style.opacity = opacity;
+        }
+    }, 30);
+
+    // Slide-in effect
+    function slideText() {
+        let pos = -50; // Start position outside the banner
+        content.style.transform = `translateX(${pos}px)`;
+        const slide = setInterval(function() {
+            if (pos >= 0) {
+                clearInterval(slide);
+            } else {
+                pos += 2;
+                content.style.transform = `translateX(${pos}px)`;
+            }
+        }, 10);
+    }
+};
