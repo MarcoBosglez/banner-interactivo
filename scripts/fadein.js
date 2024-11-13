@@ -14,5 +14,5 @@
             opacity += 0.02;
             content.style.opacity = opacity;
         }
-    }, 40);
+    }, 50);
 

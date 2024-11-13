@@ -4,13 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
         <title>Animated Spotify Banner</title>
-        <!-- Link to an external CSS file (optional) -->
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
-        <a href="https://open.spotify.com/playlist/your-playlist-id" target="_blank" id="banner" class="banner">
+        <!-- General Content -->
+        <div id="banner" class="banner">
+            <div class="promo-text">Escucha tu música favorita!</div>
             <div class="slider">
                     <div class="item">
                         <img src="./src/album1.jfif" alt="">
@@ -36,11 +42,51 @@
                     <div class="item">
                         <img src="./src/album4.jfif" alt="">
                     </div>
-                </div>
-            <img src="src/ONErpm.svg" alt="logo" id="logo">
-        </a>
+            </div>
+            <div class="music">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
+            <img src="src/ONErpm.svg" alt="logo" id="logo">
+            <div class="overlay"></div>
+        </div>
+
+        <hr></hr>
         
+        <!-- General Content -->
+        <div id="alt" class="banner">
+            <div class="promo-text2">Elige tu album favorito!</div>
+            <div class="showcase">
+                    <div class="options">
+                        <img src="./src/album1.jfif" alt="">
+                    </div>
+                    <div class="options">
+                        <img src="./src/album2.jfif" alt="">
+                    </div>
+                    <div class="options">
+                        <img src="./src/album3.jfif" alt="">
+                    </div>
+                    <div class="options">
+                        <img src="./src/album4.jfif" alt="">
+                    </div>
+            </div>
+            <div class="music" id="alt">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <img src="./src/ONErpm.svg" alt="logo" id="logo">
+            <div class="overlay"></div>
+        </div>
+
+        <!-- Animation Scripts -->
         <script src="./scripts/fadein.js"></script>
         <script src="./scripts/slider.js"></script>
     </body>

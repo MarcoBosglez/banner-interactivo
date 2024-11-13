@@ -1,54 +1,82 @@
-#banner {
+.banner {
     width: 800px;
     height: 235px;
     position: relative;
     overflow: hidden;
-    background-color: #1DB954;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-
-    background-color:rgb(245, 142, 59);
-    background-image:
-        radial-gradient(at 72% 86%, hsla(291,88%,77%,1) 0px, transparent 50%),
-        radial-gradient(at 28% 72%, hsla(360,66%,70%,1) 0px, transparent 50%),
-        radial-gradient(at 56% 7%, hsla(237,81%,61%,1) 0px, transparent 50%),
-        radial-gradient(at 0% 7%, hsla(37,67%,74%,1) 0px, transparent 50%),
-        radial-gradient(at 44% 62%, hsla(107,82%,78%,1) 0px, transparent 50%),
-        radial-gradient(at 92% 52%, hsla(108,85%,73%,1) 0px, transparent 50%),
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 268 268' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='8.06' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-
-    transition: background-image 2s ease-in-out, background-color 2s ease-in-out;
+    
+    background: linear-gradient(225deg, #d77a50, #cc4a58, #a83284, #573aa6, #7c44b8);
+    background-size: 300% 300%;
+    -webkit-animation: Rainbow 10s ease infinite;
+    -moz-animation: Rainbow 10s ease infinite;
+    animation: Rainbow 10s ease infinite;
+    z-index: 0;
 }
 
 #logo {
     position: absolute;
-    bottom: 20px;  /* Distance from the bottom of the banner */
-    left: 20px;    /* Distance from the left side of the banner */
-    width: 60px;   /* Adjust as needed */
-    height: auto;  /* Maintains aspect ratio */
-
+    bottom: 12px; 
+    left: 12px;
+    width: 55px;
+    height: auto;
+    pointer-events: none;
 }
 
-h1 {
-    font-size: 36px;
-    margin: 0;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(180deg);
+    background: transparent url('./src/output-onlinegiftools.gif');
+    opacity: .15;
+    z-index: 1;
+    pointer-events: none;
 }
 
-p {
-    font-size: 18px;
+.promo-text {
+    position: absolute;
+    text-align: center;
+    bottom: 40%; 
+    left: 8%;
+    width: 20%;
+    color: #ffffff;
+
+    font-family: "Exo 2", sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 400;
+
+    line-height: 0.8;
+    pointer-events: none;
+}
+
+.promo-text2 {
+    position: absolute;
+    top: 10%;
+    color: #ffffff;
+
+    font-family: "Exo 2", sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 400;
+
+    line-height: 0.8;
+    pointer-events: none;
 }
 
 .slider {
     position: relative;
-    /* margin-left: 10%; */
     width: 100%;
     height: 170px;
     overflow: hidden;
     justify-content: center;
 }
+
 .item {
     position: absolute;
     width: 160px;
@@ -59,7 +87,106 @@ p {
     top: 0;
 }
 
-.item > img {
+.showcase {
+    display: flex;
+    right: 2%;
+    top: 5%;
+    gap: 20px;
+    z-index: 2;
+    position: relative;
+    pointer-events: none;
+}
+
+.options {
+    position: relative;
+}
+.options img {
+    width: 120px;
+    height: auto;
+    opacity: 0.5;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: all;
+    z-index: 2;
+}
+.options img:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.music {
+    position: absolute;
+    right: 0%;
+    height: 200px;
+    display: flex;
+    opacity: 0.8;
+    transform: rotate(90deg);
+}
+.music span{
+  width: 38px;
+  margin: 0 2px;
+  border-radius: 2px;
+  height: 10px;
+  background-color: #fff;
+  animation: loader 2s infinite;
+}
+@keyframes loader{
+  0%, 100%{
+    height: 10px;
+  }
+  25%{
+    height: 95px;
+  }
+  50%{
+    height: 50px;
+  }
+  75%{
+    height: 95px;
+  }
+}
+.music span:nth-child(1){
+  animation-delay: 0.2s;
+}
+.music span:nth-child(2){
+  animation-delay: 0.5s;
+}
+.music span:nth-child(3){
+  animation-delay: 0.7s;
+}
+.music span:nth-child(4){
+  animation-delay: 0.9s;
+}
+.music span:nth-child(5){
+  animation-delay: 0.3s;
+}
+
+.item > img{
     width: 160px;
     height: 160px;
+}
+
+@-webkit-keyframes Rainbow {
+    0% {
+      background-position: 94% 0%; }
+    50% {
+      background-position: 7% 100%; }
+    100% {
+      background-position: 94% 0%; } 
+}
+
+@-webkit-keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+
+#logo, .promo-text, .music {
+    z-index: 2;
 }
