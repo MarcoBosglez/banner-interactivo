@@ -7,87 +7,104 @@
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
         <title>Animated Spotify Banner</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="stylez.css">
     </head>
     <body>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("logo").addEventListener("contextmenu", function (event) {
+                    event.preventDefault();
+                });
+            });
+        </script>
 
-        <!-- General Content -->
-        <div id="banner" class="banner">
-            <div class="promo-text">Escucha tu música favorita!</div>
-            <div class="slider">
-                    <div class="item">
-                        <img src="./src/album1.jfif" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./src/album2.jfif" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./src/album3.jfif" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./src/album4.jfif" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./src/album1.jfif" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./src/album2.jfif" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./src/album3.jfif" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./src/album4.jfif" alt="">
-                    </div>
-            </div>
-            <div class="music">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <img src="src/ONErpm.svg" alt="logo" id="logo">
-            <div class="overlay"></div>
-        </div>
-
-        <hr></hr>
-        
         <!-- General Content -->
         <div id="alt" class="banner">
-            <div class="promo-text2">Elige tu album favorito!</div>
+            
+            <div class="promo-text">
+                <p>ELIGE UNA PLAY-LIST !</p>
+            </div>
+            
             <div class="showcase">
                     <div class="options">
-                        <img src="./src/album1.jfif" alt="">
+                        <a href="https://open.spotify.com/playlist/1hUdaJY8vZqiU7UfkbuxbH?si=c0ffde2dbb154c6b">
+                            <img src="./src/charlesnacion.png" alt="">
+                        </a>
                     </div>
                     <div class="options">
-                        <img src="./src/album2.jfif" alt="">
+                        <a href="https://open.spotify.com/playlist/1hUdaJY8vZqiU7UfkbuxbH?si=c0ffde2dbb154c6b">
+                            <img src="./src/elbarrio.png" alt="">
+                        </a>
                     </div>
                     <div class="options">
-                        <img src="./src/album3.jfif" alt="">
+                        <a href="https://open.spotify.com/playlist/1hUdaJY8vZqiU7UfkbuxbH?si=c0ffde2dbb154c6b">
+                            <img src="./src/hiphopmexicano.png" alt="">
+                        </a>
                     </div>
                     <div class="options">
-                        <img src="./src/album4.jfif" alt="">
+                        <a href="https://open.spotify.com/playlist/1hUdaJY8vZqiU7UfkbuxbH?si=c0ffde2dbb154c6b">
+                            <img src="./src/rapmexicano.png" alt="">
+                        </a>
                     </div>
-            </div>
-            <div class="music" id="alt">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
 
-            <img src="./src/ONErpm.svg" alt="logo" id="logo">
-            <div class="overlay"></div>
+            <div class="bg-animation">
+                <div id='stars'></div>
+                <div id='stars2'></div>
+                <div id='stars3'></div>
+                <div id='stars4'></div>
+            </div>
+
+            <img src="./src/ONE_rpm_studios.png" alt="logo" id="logo">
+            <div class="overlay2"></div>
         </div>
 
-        <!-- Animation Scripts -->
-        <script src="./scripts/fadein.js"></script>
-        <script src="./scripts/slider.js"></script>
+
+        <HR></HR>
+
+         <!-- General Content -->
+         <div id="alt" class="banner">
+            
+            <div class="promo-text2">
+                <p>ELIGE UNA PLAYLIST !</p>
+            </div>
+            
+            <div class="showcase2">
+                    <div class="options">
+                        <a href="https://open.spotify.com/playlist/1hUdaJY8vZqiU7UfkbuxbH?si=c0ffde2dbb154c6b">
+                            <img src="./src/charlesnacion.png" alt="">
+                        </a>
+                    </div>
+                    <div class="options">
+                        <a href="https://open.spotify.com/playlist/1hUdaJY8vZqiU7UfkbuxbH?si=c0ffde2dbb154c6b">
+                            <img src="./src/elbarrio.png" alt="">
+                        </a>
+                    </div>
+                    <div class="options">
+                        <a href="https://open.spotify.com/playlist/1hUdaJY8vZqiU7UfkbuxbH?si=c0ffde2dbb154c6b">
+                            <img src="./src/hiphopmexicano.png" alt="">
+                        </a>
+                    </div>
+                    <div class="options">
+                        <a href="https://open.spotify.com/playlist/1hUdaJY8vZqiU7UfkbuxbH?si=c0ffde2dbb154c6b">
+                            <img src="./src/rapmexicano.png" alt="">
+                        </a>
+                    </div>
+            </div>
+
+            <div class="bg-animation">
+                <div id='stars'></div>
+                <div id='stars2'></div>
+                <div id='stars3'></div>
+                <div id='stars4'></div>
+            </div>
+
+            <img src="./src/ONE_rpm_studios.png" alt="logo" id="logo">
+            <div class="overlay2"></div>
+        </div>
     </body>
 </html>
