@@ -1,4 +1,4 @@
-# Custom Interactive Web Banner for ONErpm
+# Custom Interactive Web Banner for ONErpm [https://marcobosglez.github.io/banner-interactivo/]
 
 A custom frontend web development and digital design project created for a commercial music distribution campaign (ONErpm / Spotify playlist release). 
 
@@ -32,3 +32,11 @@ This project showcases the integration of tailored visual artwork with lightweig
 ### **Design & Art**
 - **Digital Illustration / Graphic Design:** Custom banner art and promotional assets
 - **Asset Optimization:** Compression and sizing for fast web loading without quality loss
+
+---
+
+## 🔒 License & Usage
+
+© 2026 Marco González. **All Rights Reserved.**
+
+This repository contains custom code and visual assets created for client release (ONErpm / Spotify). Source code and artwork are displayed strictly for portfolio purposes and may not be copied, cloned, or redistributed without permission.
